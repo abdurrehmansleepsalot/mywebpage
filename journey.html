@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>journey</title>
+    <style>
+        body 
+        {
+            margin: 0;
+            padding: 0;
+            background-image: url(https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg?cs=srgb&dl=pexels-codioful-7130475.jpg&fm=jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Times New Roman', Times, serif;
+            color: aliceblue;
+            padding-top: 80px; 
+        }
+        .header 
+        {
+            display: flex;
+            background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000; 
+        }
+        .tabs 
+        {
+            display: flex;
+            justify-content: center;
+            flex-grow: 0.96;
+            gap: 20px;
+        }
+        .tab 
+        {
+            padding: 8px 15px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #581845;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tab a 
+        {
+           text-decoration: none;
+           color: inherit;
+           display: inline-block;
+           width: 100%;
+           height: 100%; 
+        }
+        .tab:hover 
+        {
+            background-color: #581845;
+            color: white;
+        }
+        .flex-container 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto 50px;
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 4 / 1;
+            background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D);
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .flex-container > div 
+        {
+            text-align: center;
+            font-size: clamp(16px, 4vw, 36px);
+            font-weight: bold;
+            color: aliceblue;
+            padding: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        h1 
+        {
+            margin: 30px 30px 10px;
+            font-size: 2em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        p
+        {
+            margin: 10px 30px;
+            font-size: 1em;
+        }
+        @media (max-width: 600px) 
+        {
+            table img 
+            {
+                max-width: 150px; 
+            }
+
+            .header 
+            {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .tabs 
+            {
+                gap: 10px;
+            }
+
+            .tab 
+            {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+
+            .flex-container 
+            {
+                margin: 50px auto 30px;
+                max-width: 300px;
+            }
+
+            h1 
+            {
+                font-size: 1.5em;
+            }
+
+            p
+            {
+                font-size: 0.9em;
+                margin: 10px 15px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header" data-aos="fade-down">
+        <div class="tabs">
+            <div class="tab"><a href=index.html>Home</a></div>
+            <div class="tab"><a href=basic.html>Basics</a></div>
+            <div class="tab"><a href=edits.html>Edits</a></div>
+            <div class="tab"><a href=gallery.html>Gallery</a></div>
+            <div class="tab"><a href=journey.html>Journey</a></div>
+        </div>
+    </div>
+
+    <div class="flex-container" data-aos="fade-down">
+        <div>Journey</div>
+    </div>
+    
+    <br>
+
+    <p style="text-align: center;" data-aos="fade-down">Our page not only guides you about photography but also provides a platform for you, so you can create your own work and 
+        show it to others
+    </p>
+    <br>
+    <p style="text-align: center; font-size: 30px; font-family: 'Times New Roman', Times, serif;" data-aos="fade-down">
+        Fill the form and continue
+    </p><br>
+
+    <div id="form" 
+    style="width:40%; margin-left: 30%; border: 1px solid whitesmoke; border-radius: 10px; padding: 10px;
+    background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D);
+    background-size: cover">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" placeholder="your first name"><br><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" placeholder="your last name"><br><br>
+        <label for="uemail">Email:</label><br>
+        <input type="email" id="uemail" placeholder="your email"><br><br>
+        <label for="phno">Phone number: </label><br>
+        <input type="number" id="phno" placeholder="phone number"><br><br>
+        <p style="margin-left: 5px;">What is your gender:</p>
+        <input type="radio" id="male" name="gender">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label><br>
+        <input type="radio" id="others" name="gender">
+        <label for="others">Others</label><br><br>
+
+        <p style="margin-left: 5px;">Device you are going to use: </p>
+        <input type="radio" id="camera" name="format">
+        <label for="camera">Camera</label><br>
+        <input type="radio" id="phone" name="format">
+        <label for="phone">Phone</label><br><br>
+
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass" placeholder="your password"><br><br>
+
+        <button style="
+        background: linear-gradient(90deg, #581845, #900C3F);color: aliceblue;border: none;border-radius: 12px;padding: 10px 20px;font-size: 16px;cursor: pointer;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);transition: all 0.3s ease-in-out;">
+            Submit
+        </button>
+    </div>
+
+    <footer style="background-color: rgba(0, 0, 0, 0.7); padding: 20px; text-align: center; color: aliceblue; position: relative; z-index: 1000; margin-top: 50px;">
+        <div style="margin-bottom: 20px;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, feel free to reach out!</p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div>
+                <h4>Email:</h4>
+                <p>moon@gmail.com</p>
+            </div>
+            <div>
+                <h4>Phone:</h4>
+                <p>+123 456 7890</p>
+            </div>
+            <div>
+                <h4>Follow Us:</h4>
+                <p> 
+                    <a href="https://www.instagram.com/pixsbymoon/" target="_blank" style="color: aliceblue; text-decoration: none;">Instagram</a>
+                </p>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <p>&copy; 2024 Photography Page | All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        AOS.init({
+            once:false,  
+            duration: 1000,  
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>gallery</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-image: url(https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg?cs=srgb&dl=pexels-codioful-7130475.jpg&fm=jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Times New Roman', Times, serif;
+            color: aliceblue;
+            overflow-x: hidden;
+            padding-top: 80px; 
+        }
+        .header 
+        {
+            display: flex;
+            background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000; 
+        }
+        .tabs 
+        {
+            display: flex;
+            justify-content: center;
+            flex-grow: 0.96;
+            gap: 20px;
+        }
+        .tab
+        {
+            padding: 8px 15px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #581845;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tab a {
+           text-decoration: none;
+           color: inherit;
+           display: inline-block;
+           width: 100%;
+           height: 100%; 
+        }
+        .tab:hover 
+        {
+            background-color: #581845;
+            color: white;
+        }
+        .flex-container 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto 50px;
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 4 / 1;
+            background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D);
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .flex-container > div 
+        {
+            text-align: center;
+            font-size: clamp(16px, 4vw, 36px);
+            font-weight: bold;
+            color: aliceblue;
+            padding: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        h1 
+        {
+            font-size: clamp(1.5em, 2.5vw, 2.5em);
+            margin-bottom: 10px;
+        }
+        table 
+        {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        td 
+        {
+            width: 50%;
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+            word-wrap: break-word;
+        }
+        td img 
+        {
+           max-width: 100%; 
+           height: auto;
+           margin: 0 auto;
+           display: block;
+           border-radius: 10px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        img 
+        {
+            width: 90%; 
+            max-width: 350px; 
+            height: auto; 
+            display: block; 
+            margin: 20px auto; 
+        }
+        p 
+        {
+            font-size: clamp(0.9em, 1.2vw, 1em);
+            line-height: 1.5;
+            margin-bottom: 10px;
+            padding: 0 10px;
+        }
+
+        @media (max-width: 600px) 
+        {
+            table 
+            {
+                width: 100%;
+            }
+            td img 
+            {
+                max-width: 100%; 
+                height: auto;
+                margin: 0 auto;
+            }
+            .header 
+            {
+                max-width: 100%;
+                gap: 10px;
+            }
+            .tabs 
+            {
+                gap: 10px;
+            }
+            .tab 
+            {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+            .flex-container 
+            {
+                margin: 50px auto 30px;
+                max-width: 300px;
+            }
+            td 
+            {
+               text-align: center;
+               padding: 5px;
+            }
+            h1 
+            {
+                font-size: 1.2em;
+            }
+            p 
+            {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header" data-aos="fade-down">
+        <div class="tabs">
+            <div class="tab"><a href=index.html>Home</a></div>
+            <div class="tab"><a href=basic.html>Basics</a></div>
+            <div class="tab"><a href=edits.html>Edits</a></div>
+            <div class="tab"><a href=gallery.html>Gallery</a></div>
+            <div class="tab"><a href=journey.html>Journey</a></div>
+        </div>
+    </div>
+
+    <div class="flex-container" data-aos="fade-down">
+        <div>Gallery</div>
+    </div>
+    
+    <table>
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://media.gq.com/photos/5f85f4f8bd3a91bc1eca6164/16:9/w_1280,c_limit/timothee-chalamet-gq-november-cover-2020-social.jpg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://cdn.mos.cms.futurecdn.net/gEVeMdQ2KRmCyvnpfYBZbY.jpg" alt="pic">
+            </td>
+        </tr>
+
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://wallpaperswide.com/download/summer_landscape-wallpaper-1280x720.jpg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://xperi.com/wp-content/uploads/2024/09/Xperi.com-Blog-Header-1280-%C3%97-720-px-37.png" alt="pic">
+            </td>
+        </tr>
+
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://www.hdwallpapers.in/download/road_fence_trees_bushes_blue_sky_scenery_nature_background_4k_hd_nature-1280x720.jpg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://i.ytimg.com/vi/la8IDF2P124/maxresdefault.jpg" alt="pic">
+            </td>
+        </tr>
+
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147496135/images/63bd3b-8ee-011-634-51f651a8a4f5_5F5E6408-C80D-446A-B082-6E047426FB98_1_201_a.jpeg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://www.rowansims.com/wp-content/uploads/2018/03/best-lens-for-landscape-photography-rowansims-2-1280x720.jpg" alt="pic">
+            </td>
+        </tr>
+
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://i.ytimg.com/vi/WRAdiGlquzU/maxresdefault.jpg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://media.newyorker.com/photos/66c8bbcf615440ce5194b773/16:9/w_1280,c_limit/r44735_rd.jpg" alt="pic">
+            </td>
+        </tr>
+
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://static.toiimg.com/thumb/msid-109994982,width-1280,height-720,resizemode-4/109994982.jpg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://scene7.toyota.eu/is/image/toyotaeurope/gt86-driving-along-road-1920x1080?wid=1280&fit=fit,1&ts=0&resMode=sharp2&op_usm=1.75,0.3,2,0" alt="pic">
+            </td>
+        </tr>
+
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://www.adorama.com/alc/wp-content/uploads/2016/09/dslr-camera-feature-1280x720.jpg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://gnnhd.tv/media/122476/conversions/Tesla-Car-1280x720.webp" alt="pic">
+            </td>
+        </tr>
+
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://gaadiwaadi.com/wp-content/uploads/2021/01/BMW-M5-CS-front-view-1280x720.jpg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://i.ytimg.com/vi/ZpXwwirXktk/maxresdefault.jpg" alt="pic">
+            </td>
+        </tr>
+
+        <tr>
+            <td data-aos="fade-right" data-aos-delay="100">
+                <img src="https://cdn.pixabay.com/photo/2020/08/25/11/14/chess-5516468_1280.jpg" alt="pic">
+            </td>
+            <td data-aos="fade-left" data-aos-delay="100">
+                <img src="https://i.ytimg.com/vi/TaGmsLVeEBk/maxresdefault.jpg" alt="pic">
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <footer style="background-color: rgba(0, 0, 0, 0.7); padding: 20px; text-align: center; color: aliceblue; position: relative; z-index: 1000; margin-top: 50px;" data-aos="fade-up">
+        <div style="margin-bottom: 20px;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, feel free to reach out!</p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div>
+                <h4>Email:</h4>
+                <p>moon@gmail.com</p>
+            </div>
+            <div>
+                <h4>Phone:</h4>
+                <p>123 456 7890</p>
+            </div>
+            <div>
+                <h4>Follow Us:</h4>
+                <p>
+                    <a href="https://www.instagram.com/pixsbymoon/" target="_blank" style="color: aliceblue; text-decoration: none;">Instagram</a>
+                </p>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <p>&copy; 2024 Photography Page | All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        AOS.init({
+            once:false,
+            duration:1000,
+        });
+    </script>
+</body>
+</html>

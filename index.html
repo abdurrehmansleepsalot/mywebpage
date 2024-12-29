@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>home</title>
+    <style>
+        body 
+        {
+            margin: 0;
+            padding: 0;
+            background-image: url(https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg?cs=srgb&dl=pexels-codioful-7130475.jpg&fm=jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Times New Roman', Times, serif;
+            color: aliceblue;
+            padding-top: 80px; 
+        }
+        .header 
+        {
+            display: flex;
+            background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D);
+            padding: 10px 20px;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000; 
+        }
+        
+        .tabs 
+        {
+            display: flex;
+            justify-content: center;
+            flex-grow: 0.96;
+            gap: 20px;
+        }
+        .tab 
+        {
+            padding: 8px 15px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #581845;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tab a 
+        {
+           text-decoration: none;
+           color: inherit;
+           display: inline-block;
+           width: 100%;
+           height: 100%; 
+        }
+        .tab:hover 
+        {
+            background-color: #581845;
+            color: white;
+        }
+        .flex-container 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto 50px;
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 4 / 1;
+            background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D);
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .flex-container > div 
+        {
+            text-align: center;
+            font-size: clamp(16px, 4vw, 36px);
+            font-weight: bold;
+            color: aliceblue;
+            padding: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        h1 
+        {
+            margin: 30px 30px 10px;
+            font-size: 2em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        img 
+        {
+            width: 90%; 
+            max-width: 300px; 
+            height: auto; 
+            display: block; 
+            margin: 20px auto; 
+        }
+        p
+        {
+            margin: 10px 30px;
+            font-size: 1em;
+        }
+        i 
+        {
+            color: #ddd;
+        }
+
+        @media (max-width: 600px) 
+        {
+            table img 
+            {
+                max-width: 150px; 
+            }
+
+            .header 
+            {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .tabs 
+            {
+                gap: 10px;
+            }
+
+            .tab 
+            {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+
+            .flex-container 
+            {
+                margin: 50px auto 30px;
+                max-width: 300px;
+            }
+
+            h1 
+            {
+                font-size: 1.5em;
+            }
+
+            p
+            {
+                font-size: 0.9em;
+                margin: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header" data-aos="fade-down">
+        <div class="tabs">
+            <div class="tab"><a href=index.html>Home</a></div>
+            <div class="tab"><a href=basic.html>Basics</a></div>
+            <div class="tab"><a href=edits.html>Edits</a></div>
+            <div class="tab"><a href=gallery.html>Gallery</a></div>
+            <div class="tab"><a href=journey.html>Journey</a></div>
+        </div>
+    </div>
+
+
+    <div class="flex-container" data-aos="fade-right">
+        <div>PHOTOGRAPHY</div>
+    </div>
+    
+
+    <h1 data-aos="fade-down" style="text-align: center;">Welcome to My Photography Page!</h1><br>
+    <p data-aos="fade-right" style="text-align: center;">My name is Abdur Rehman from PUCIT, and I have created a complete guide on photography.</p>
+    <img src="https://i.pcmag.com/imagery/articles/07JoQVzt3zX0eQVLPDV0HyK-28..v1672948002.jpg" alt="pic" data-aos="fade-down">
+
+
+    <h1 data-aos="fade-down" style="text-align: center;">Aims</h1>
+    <p data-aos="fade-right" data-aos-delay="100" style="text-align: center;">Provide a basic introduction to photography.</p>
+    <p data-aos="fade-right" data-aos-delay="200" style="text-align: center;">Improve the way you take your pictures.</p>
+    <p data-aos="fade-right" data-aos-delay="300" style="text-align: center;">Teach you better photo editing techniques.</p>
+    <p data-aos="fade-right" data-aos-delay="400" style="text-align: center;">Help you stand out in photography.</p>
+    <img src="https://images.wallpaperscraft.com/image/single/camera_hand_photographer_175751_1280x720.jpg" alt="pic" data-aos="fade-down">
+    <br>
+
+
+    <h1 style="text-align: center;" data-aos="fade-right">Purpose</h1>
+    <p style="text-align: center;" data-aos="fade-right" data-aos-delay="100"><i>Photography has become a joke to many; it requires serious attention.</i></p>
+    <p style="text-align: center;" data-aos="fade-right" data-aos-delay="200">I aim to bring depth and character to photography so people can understand its scope and complexity.</p>
+    <img src="https://i.ytimg.com/vi/jxnYSqJvwSw/maxresdefault.jpg" alt="pic" data-aos="fade-down"><br>
+
+
+    <h1 style="text-align: center;" data-aos="fade-down">Goal</h1>
+    <p style="text-align: center;" data-aos="fade-right" data-aos-delay="100">My ultimate goal is to provide most information about photography so people can understand its importance.</p>
+    <p style="text-align: center;" data-aos="fade-right" data-aos-delay="200">Although that is possible as well in our generic photography but if we are talking about professional photography, 
+    things are quite different</p>
+    <img src="https://i.ytimg.com/vi/wrFvnouy2B0/maxresdefault.jpg" alt="pic" data-aos="fade-down">
+
+    <footer style="background-color: rgba(0, 0, 0, 0.7); padding: 20px; text-align: center; color: aliceblue; position: relative; z-index: 1000; margin-top: 50px;">
+        <div style="margin-bottom: 20px;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, feel free to reach out!</p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div>
+                <h4>Email:</h4>
+                <p>moon@gmail.com</a></p>
+            </div>
+            <div>
+                <h4>Phone:</h4>
+                <p>+123 456 7890</p>
+            </div>
+            <div>
+                <h4>Follow Us:</h4>
+                <p>
+                    <a href="https://www.instagram.com/pixsbymoon/" target="_blank" style="color: aliceblue; text-decoration: none;">Instagram</a>
+                </p>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <p>&copy; 2024 Photography Page | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        AOS.init({
+            once: false,
+            duration: 1000,
+        })
+    </script>
+</body>
+</html>
